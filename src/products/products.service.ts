@@ -19,7 +19,7 @@ export class ProductsService {
     return data as Product[];
   }
 
-  async findOne(id: number): Promise<Product> {
+  async findOne(id: string): Promise<Product> {
     const supabase = this.supabaseService.getClient();
     const response: PostgrestSingleResponse<Product> = await supabase
       .from('Products')
